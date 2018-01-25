@@ -19,6 +19,7 @@
 *~
 po/*.gmo*
 po/*.po*
+!po/ja.po
 src/*.o
 tests/*.log
 tests/*.trs
