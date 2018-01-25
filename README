@@ -1,3 +1,16 @@
+-------------------------------
+This repository contains an updated Japanese translation for wget.
+
+upstream is:
+git://git.sv.gnu.org/wget.git
+
+While 'master' branch is the upstream master, 'japanese-translation' branch
+contains an updated ja.po (Japanese translation of the strings in wget) for
+master.  The updated translation will be sent to the Translation Project as
+soon as wget.pot (official translatable string list) is updated, and quickly
+upstreamed.
+-------------------------------
+
                                                           -*- text -*-
 GNU Wget
 ========
