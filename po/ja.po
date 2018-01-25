@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: wget 1.18.109\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
 "POT-Creation-Date: 2018-01-25 20:57+0900\n"
-"PO-Revision-Date: 2017-01-18 19:20+0900\n"
+"PO-Revision-Date: 2018-01-25 21:02+0900\n"
 "Last-Translator: Hiroshi Takekawa <sian@big.or.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -100,29 +100,29 @@ msgid "Unknown error"
 msgstr "不明なエラーです"
 
 #: lib/getopt.c:278
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s%s' is ambiguous\n"
-msgstr "%s: オプション '%s' は曖昧です\n"
+msgstr "%s: オプション '%s%s' は曖昧です\n"
 
 #: lib/getopt.c:284
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s%s' is ambiguous; possibilities:"
-msgstr "%s: オプション '%s' は曖昧です。選択肢は次の通りです:"
+msgstr "%s: オプション '%s%s' は曖昧です。選択肢は次の通りです:"
 
 #: lib/getopt.c:319
-#, fuzzy, c-format
+#, c-format
 msgid "%s: unrecognized option '%s%s'\n"
-msgstr "%s: '%c%s' は認識できないオプションです\n"
+msgstr "%s: '%s%s' は認識できないオプションです\n"
 
 #: lib/getopt.c:345
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s%s' doesn't allow an argument\n"
-msgstr "%s: オプション '%c%s' は引数を必要としません\n"
+msgstr "%s: オプション '%s%s' は引数を必要としません\n"
 
 #: lib/getopt.c:360
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s%s' requires an argument\n"
-msgstr "%s: オプション '--%s' は引数を必要とします\n"
+msgstr "%s: オプション '%s%s' は引数を必要とします\n"
 
 #: lib/getopt.c:621
 #, c-format
@@ -813,9 +813,9 @@ msgid "ERROR: GnuTLS requires the key and the cert to be of the same type.\n"
 msgstr "エラー: GnuTLS は鍵と証明書のタイプが同じでなければなりません。\n"
 
 #: src/gnutls.c:601
-#, fuzzy, c-format
+#, c-format
 msgid "GnuTLS: unimplemented 'secure-protocol' option value %u\n"
-msgstr "GnuTLS: 実装されていない 'secure-protocol' オプション値 %d\n"
+msgstr "GnuTLS: 実装されていない 'secure-protocol' オプション値 %u\n"
 
 #: src/gnutls.c:603 src/gnutls.c:640 src/host.c:157 src/openssl.c:278
 msgid "Please report this issue to bug-wget@gnu.org\n"
@@ -1293,10 +1293,10 @@ msgid "Unsupported algorithm '%s'.\n"
 msgstr "'%s' というアルゴリズムはサポートされていません。\n"
 
 #: src/init.c:581
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s: WGETRC points to %s, which couldn't be accessed because of error: %s.\n"
-msgstr "%s: WGETRC が %s を指していますが, 存在しません。\n"
+msgstr "%s: WGETRC が %s を指していますが, 存在しません: %s\n"
 
 #: src/init.c:682 src/netrc.c:250
 #, c-format
@@ -1619,11 +1619,10 @@ msgstr ""
 "しない\n"
 
 #: src/main.c:644
-#, fuzzy
 msgid ""
 "       --no-netrc                  don't try to obtain credentials from ."
 "netrc\n"
-msgstr "       --no-config                 設定ファイルを読みこまない\n"
+msgstr "       --no-netrc                  .netrc から認証情報を取得しない\n"
 
 #: src/main.c:646
 msgid ""
@@ -1971,6 +1970,8 @@ msgid ""
 "       --compression=TYPE          choose compression, one of auto, gzip and "
 "none. (default: none)\n"
 msgstr ""
+"       --compression=TYPE          圧縮アルゴリズムの指定: autoかgzipか"
+"none(デフォルトはnone)\n"
 
 #: src/main.c:782
 msgid ""
@@ -2104,14 +2105,13 @@ msgid "HTTPS (SSL/TLS) options:\n"
 msgstr "HTTPS (SSL/TLS) オプション:\n"
 
 #: src/main.c:828
-#, fuzzy
 msgid ""
 "       --secure-protocol=PR        choose secure protocol, one of auto, "
 "SSLv2,\n"
 "                                     SSLv3, TLSv1, TLSv1_1, TLSv1_2 and PFS\n"
 msgstr ""
 "       --secure-protocol=PR        セキュアプロトコルを選択する (auto, "
-"SSLv2, SSLv3, TLSv1, PFS)\n"
+"SSLv2, SSLv3, TLSv1, TLSv1_1, TLSv1_2, PFS)\n"
 
 #: src/main.c:831
 msgid "       --https-only                only follow secure HTTPS links\n"
@@ -2547,15 +2547,16 @@ msgid ""
 msgstr "  -np, --no-parent                 親ディレクトリを取得対象にしない\n"
 
 #: src/main.c:1008
-#, fuzzy
 msgid "Email bug reports, questions, discussions to <bug-wget@gnu.org>\n"
-msgstr "バグ報告や提案は<bug-wget@gnu.org>へ\n"
+msgstr "バグ報告や質問、議論は<bug-wget@gnu.org>へ\n"
 
 #: src/main.c:1009
 msgid ""
 "and/or open issues at https://savannah.gnu.org/bugs/?"
 "func=additem&group=wget.\n"
 msgstr ""
+"それと(あるいはまたは) https://savannah.gnu.org/bugs/?"
+"func=additem&group=wget に登録してください。\n"
 
 #: src/main.c:1014
 #, c-format
@@ -2812,13 +2813,13 @@ msgstr ""
 "ん。\n"
 
 #: src/main.c:1710
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Compression does not work with --continue or --start-pos, they will be "
 "disabled.\n"
 msgstr ""
-"WARC で出力する場合は --continue や --start-pos は使えないので、それらを無効"
-"にします。\n"
+"圧縮は --continue や --start-pos とは同時に使えません。圧縮は無効化されま"
+"す。\n"
 
 #: src/main.c:1721
 #, c-format
@@ -3337,9 +3338,8 @@ msgid "HTTPS support not compiled in"
 msgstr "HTTPS がサポートされるようコンパイルされていません"
 
 #: src/url.c:1601
-#, fuzzy
 msgid "Unconvertable multibyte sequence encountered\n"
-msgstr "不完全か不正なマルチバイト文字列です\n"
+msgstr "変換できないマルチバイト文字列です\n"
 
 #: src/utils.c:125
 #, c-format
@@ -3368,34 +3368,37 @@ msgid "Failed to unlink symlink %s: %s\n"
 msgstr "シンボリックリンク %s の削除に失敗しました: %s\n"
 
 #: src/utils.c:879
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to Fopen file %s\n"
-msgstr "libcares の初期化に失敗しました\n"
+msgstr "ファイル %s の fopen() 失敗しました\n"
 
 #: src/utils.c:885
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to get FD for file %s\n"
-msgstr "%s のパーミッションが設定できません。\n"
+msgstr "ファイル %s の FD(ファイルディスクリプタ) の取得に失敗しました\n"
 
 #: src/utils.c:892
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to stat file %s, (check permissions)\n"
-msgstr "%s のパーミッションが設定できません。\n"
+msgstr ""
+"ファイル %s の stat() に失敗しました (パーミッションを確認してください)\n"
 
 #: src/utils.c:902
 #, c-format
 msgid "File %s changed since the last check. Security check failed."
 msgstr ""
+"ファイル %s は最後に確認した時から変更されています。セキュリティチェックに失"
+"敗しました。"
 
 #: src/utils.c:937
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open file %s, reason :%s\n"
-msgstr "IP アドレス '%s' を理解できませんでした。\n"
+msgstr "ファイル %s のオープンに失敗しました: %s\n"
 
 #: src/utils.c:943
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to stat file %s, error: %s\n"
-msgstr "%s のパーミッションが設定できません。\n"
+msgstr "ファイル %s の stat() に失敗しました: %s\n"
 
 #: src/utils.c:952
 #, c-format
@@ -3403,6 +3406,8 @@ msgid ""
 "Trying to open file %s but it changed since last check. Security check "
 "failed."
 msgstr ""
+"ファイル %s をオープンしようとしたところ最後に確認した時から変更されていまし"
+"た。セキュリティチェックに失敗しました。"
 
 #: src/utils.c:2456 src/utils.c:2475
 #, c-format
@@ -3417,7 +3422,7 @@ msgstr "%s をマッチ中にエラーが発生しました: %d\n"
 #: src/utils.c:2816
 #, c-format
 msgid "Skipping key with wrong size (%d/%d): %s\n"
-msgstr ""
+msgstr "間違ったサイズのキーをスキップします (%d/%d): %s\n"
 
 #: src/warc.c:223
 msgid "Error opening GZIP stream to WARC file.\n"
@@ -3497,41 +3502,3 @@ msgstr "一時 WARC ファイルをオープンできません。\n"
 msgid "Found exact match in CDX file. Saving revisit record to WARC.\n"
 msgstr ""
 "CDX ファイルに一致を発見しました。revisit レコードを WARC に記録します。\n"
-
-#~ msgid "%s: option '--%s' doesn't allow an argument\n"
-#~ msgstr "%s: オプション '--%s' は引数を必要としません\n"
-
-#~ msgid "%s: unrecognized option '--%s'\n"
-#~ msgstr "%s: '--%s' は認識できないオプションです\n"
-
-#~ msgid "%s: option '-W %s' is ambiguous\n"
-#~ msgstr "%s: オプション '-W %s' は曖昧です\n"
-
-#~ msgid "%s: option '-W %s' doesn't allow an argument\n"
-#~ msgstr "%s: オプション '-W %s' は引数を取りません\n"
-
-#~ msgid "%s: option '-W %s' requires an argument\n"
-#~ msgstr "%s: オプション '-W %s' は引数を必要とします\n"
-
-#~ msgid "File `%s' already there; not retrieving.\n"
-#~ msgstr "ファイル `%s' はすでに存在するので、取得しません。\n"
-
-#~ msgid ""
-#~ "Found no broken links.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "壊れたリンクはありませんでした。\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "Found %d broken link.\n"
-#~ "\n"
-#~ msgid_plural ""
-#~ "Found %d broken links.\n"
-#~ "\n"
-#~ msgstr[0] ""
-#~ "%d 個の壊れたリンクを見つけました。\n"
-#~ "\n"
-#~ msgstr[1] ""
-#~ "%d 個の壊れたリンクを見つけました。\n"
-#~ "\n"
