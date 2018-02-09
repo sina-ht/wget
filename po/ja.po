@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wget 1.18.109\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
-"POT-Creation-Date: 2018-01-25 20:57+0900\n"
+"POT-Creation-Date: 2018-02-09 22:28+0900\n"
 "PO-Revision-Date: 2018-01-25 21:02+0900\n"
 "Last-Translator: Hiroshi Takekawa <sian@big.or.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -657,7 +657,7 @@ msgstr ""
 "%s (%s) - %s へ保存終了 [%s]\n"
 "\n"
 
-#: src/ftp.c:2097 src/main.c:2127 src/metalink.c:1137 src/recur.c:511
+#: src/ftp.c:2097 src/main.c:2132 src/metalink.c:1137 src/recur.c:511
 #: src/recur.c:746 src/retr.c:1293
 #, c-format
 msgid "Removing %s.\n"
@@ -2680,7 +2680,7 @@ msgstr ""
 msgid "Please send bug reports and questions to <bug-wget@gnu.org>.\n"
 msgstr "バグ報告や質問は<bug-wget@gnu.org>へ\n"
 
-#: src/main.c:1361 src/main.c:1895
+#: src/main.c:1361 src/main.c:1900
 #, c-format
 msgid "Memory allocation problem\n"
 msgstr "メモリ確保できません\n"
@@ -2873,13 +2873,13 @@ msgstr "--body-data と --body-file を両方指定することはできませ�
 msgid "This version does not have support for IRIs\n"
 msgstr "このバージョンは IRI をサポートしていません\n"
 
-#: src/main.c:1961
+#: src/main.c:1966
 #, c-format
 msgid ""
 "-k or -r can be used together with -O only if outputting to a regular file.\n"
 msgstr "-k や -r は普通のファイルに出力する時だけ -O と一緒に使えます。\n"
 
-#: src/main.c:1967
+#: src/main.c:1972
 #, c-format
 msgid ""
 "--convert-links or --convert-file-only can be used together only if "
@@ -2888,42 +2888,42 @@ msgstr ""
 "--convert-links や --convert-file-only は普通のファイルに出力する時だけ使えま"
 "す。\n"
 
-#: src/main.c:1978
+#: src/main.c:1983
 #, c-format
 msgid "Failed to init libcares\n"
 msgstr "libcares の初期化に失敗しました\n"
 
-#: src/main.c:1984
+#: src/main.c:1989
 #, c-format
 msgid "Failed to init c-ares channel\n"
 msgstr "c-ares チャネルの初期化に失敗しました\n"
 
-#: src/main.c:2007
+#: src/main.c:2012
 #, c-format
 msgid "Failed to parse IP address '%s'\n"
 msgstr "IP アドレス '%s' を理解できませんでした。\n"
 
-#: src/main.c:2018
+#: src/main.c:2023
 #, c-format
 msgid "Failed to set DNS server(s) '%s' (%d)\n"
 msgstr "'%s' というDNSサーバを設定できません: (%d)\n"
 
-#: src/main.c:2146
+#: src/main.c:2151
 #, c-format
 msgid "No URLs found in %s.\n"
 msgstr "%s にはURLがありません。\n"
 
-#: src/main.c:2162
+#: src/main.c:2167
 #, c-format
 msgid "Unable to parse metalink file %s.\n"
 msgstr "メタリンクファイル %s の解析に失敗しました。\n"
 
-#: src/main.c:2192 src/metalink.c:337
+#: src/main.c:2197 src/metalink.c:337
 #, c-format
 msgid "Could not download all resources from %s.\n"
 msgstr "%s から全てにリソースはダウンロードできませんでした。\n"
 
-#: src/main.c:2219
+#: src/main.c:2224
 #, c-format
 msgid ""
 "FINISHED --%s--\n"
@@ -2934,7 +2934,7 @@ msgstr ""
 "経過時間: %s\n"
 "ダウンロード完了: %d ファイル、%s バイトを %s で取得 (%s)\n"
 
-#: src/main.c:2233
+#: src/main.c:2238
 #, c-format
 msgid "Download quota of %s EXCEEDED!\n"
 msgstr "容量制限(%s バイト)を超過します!\n"
@@ -3362,45 +3362,45 @@ msgstr ""
 msgid "Continuing in background, pid %d.\n"
 msgstr "バックグラウンドで継続します、pidは %d。\n"
 
-#: src/utils.c:579
+#: src/utils.c:554
 #, c-format
 msgid "Failed to unlink symlink %s: %s\n"
 msgstr "シンボリックリンク %s の削除に失敗しました: %s\n"
 
-#: src/utils.c:879
+#: src/utils.c:854
 #, c-format
 msgid "Failed to Fopen file %s\n"
 msgstr "ファイル %s の fopen() 失敗しました\n"
 
-#: src/utils.c:885
+#: src/utils.c:860
 #, c-format
 msgid "Failed to get FD for file %s\n"
 msgstr "ファイル %s の FD(ファイルディスクリプタ) の取得に失敗しました\n"
 
-#: src/utils.c:892
+#: src/utils.c:867
 #, c-format
 msgid "Failed to stat file %s, (check permissions)\n"
 msgstr ""
 "ファイル %s の stat() に失敗しました (パーミッションを確認してください)\n"
 
-#: src/utils.c:902
+#: src/utils.c:877
 #, c-format
 msgid "File %s changed since the last check. Security check failed."
 msgstr ""
 "ファイル %s は最後に確認した時から変更されています。セキュリティチェックに失"
 "敗しました。"
 
-#: src/utils.c:937
+#: src/utils.c:912
 #, c-format
 msgid "Failed to open file %s, reason :%s\n"
 msgstr "ファイル %s のオープンに失敗しました: %s\n"
 
-#: src/utils.c:943
+#: src/utils.c:918
 #, c-format
 msgid "Failed to stat file %s, error: %s\n"
 msgstr "ファイル %s の stat() に失敗しました: %s\n"
 
-#: src/utils.c:952
+#: src/utils.c:927
 #, c-format
 msgid ""
 "Trying to open file %s but it changed since last check. Security check "
@@ -3409,17 +3409,17 @@ msgstr ""
 "ファイル %s をオープンしようとしたところ最後に確認した時から変更されていまし"
 "た。セキュリティチェックに失敗しました。"
 
-#: src/utils.c:2456 src/utils.c:2475
+#: src/utils.c:2431 src/utils.c:2450
 #, c-format
 msgid "Invalid regular expression %s, %s\n"
 msgstr "%s は無効な正規表現です, %s\n"
 
-#: src/utils.c:2499 src/utils.c:2523
+#: src/utils.c:2474 src/utils.c:2498
 #, c-format
 msgid "Error while matching %s: %d\n"
 msgstr "%s をマッチ中にエラーが発生しました: %d\n"
 
-#: src/utils.c:2816
+#: src/utils.c:2791
 #, c-format
 msgid "Skipping key with wrong size (%d/%d): %s\n"
 msgstr "間違ったサイズのキーをスキップします (%d/%d): %s\n"
