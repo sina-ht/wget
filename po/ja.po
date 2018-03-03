@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wget 1.18.109\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
-"POT-Creation-Date: 2018-02-09 22:28+0900\n"
+"POT-Creation-Date: 2018-03-03 12:15+0900\n"
 "PO-Revision-Date: 2018-01-25 21:02+0900\n"
 "Last-Translator: Hiroshi Takekawa <sian@big.or.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -1427,16 +1427,16 @@ msgstr ""
 msgid "Encoding %s isn't valid\n"
 msgstr "エンコード %s は無効です\n"
 
-#: src/iri.c:139 src/url.c:1570
+#: src/iri.c:139 src/url.c:1571
 #, c-format
 msgid "Conversion from %s to %s isn't supported\n"
 msgstr "%s から %s への変換はサポートしていません\n"
 
-#: src/iri.c:179 src/url.c:1598
+#: src/iri.c:179 src/url.c:1601
 msgid "Incomplete or invalid multibyte sequence encountered\n"
 msgstr "不完全か不正なマルチバイト文字列です\n"
 
-#: src/iri.c:198 src/url.c:1615
+#: src/iri.c:198 src/url.c:1618
 #, c-format
 msgid "Unhandled errno %d\n"
 msgstr "処理されないエラー (errno %d)\n"
@@ -3115,12 +3115,12 @@ msgstr "fake_fork_child() が失敗しました\n"
 msgid "fake_fork() failed\n"
 msgstr "fake_fork() が失敗しました\n"
 
-#: src/mswindows.c:459 src/mswindows.c:466
+#: src/mswindows.c:460 src/mswindows.c:467
 #, c-format
 msgid "%s: Couldn't find usable socket driver.\n"
 msgstr "%s: 使用可能なソケットドライバを見つけられません。\n"
 
-#: src/mswindows.c:646
+#: src/mswindows.c:647
 #, c-format
 msgid "ioctl() failed.  The socket could not be set as blocking.\n"
 msgstr ""
@@ -3337,7 +3337,7 @@ msgstr "IPv6 アドレスが不正です"
 msgid "HTTPS support not compiled in"
 msgstr "HTTPS がサポートされるようコンパイルされていません"
 
-#: src/url.c:1601
+#: src/url.c:1604
 msgid "Unconvertable multibyte sequence encountered\n"
 msgstr "変換できないマルチバイト文字列です\n"
 
