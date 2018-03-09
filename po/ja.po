@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wget 1.18.109\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
-"POT-Creation-Date: 2018-03-07 21:44+0900\n"
-"PO-Revision-Date: 2018-03-07 21:46+0900\n"
+"POT-Creation-Date: 2018-03-09 20:11+0900\n"
+"PO-Revision-Date: 2018-03-09 20:11+0900\n"
 "Last-Translator: Hiroshi Takekawa <sian@big.or.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -817,7 +817,7 @@ msgstr "エラー: GnuTLS は鍵と証明書のタイプが同じでなければ
 msgid "GnuTLS: unimplemented 'secure-protocol' option value %u\n"
 msgstr "GnuTLS: 実装されていない 'secure-protocol' オプション値 %u\n"
 
-#: src/gnutls.c:603 src/gnutls.c:640 src/host.c:157 src/openssl.c:278
+#: src/gnutls.c:603 src/gnutls.c:640 src/host.c:157 src/openssl.c:289
 msgid "Please report this issue to bug-wget@gnu.org\n"
 msgstr "この問題を bug-wget@gnu.org に報告してください\n"
 
@@ -826,15 +826,15 @@ msgstr "この問題を bug-wget@gnu.org に報告してください\n"
 msgid "GnuTLS: unimplemented 'secure-protocol' option value %d\n"
 msgstr "GnuTLS: 実装されていない 'secure-protocol' オプション値 %d\n"
 
-#: src/gnutls.c:768 src/openssl.c:791
+#: src/gnutls.c:768 src/openssl.c:802
 msgid "ERROR"
 msgstr "エラー"
 
-#: src/gnutls.c:768 src/openssl.c:791
+#: src/gnutls.c:768 src/openssl.c:802
 msgid "WARNING"
 msgstr "警告"
 
-#: src/gnutls.c:779 src/openssl.c:804
+#: src/gnutls.c:779 src/openssl.c:815
 #, c-format
 msgid "%s: No certificate presented by %s.\n"
 msgstr "%s: %s から証明書の提示がありませんでした\n"
@@ -902,7 +902,7 @@ msgstr "証明書は失効しています。\n"
 msgid "The certificate's owner does not match hostname %s\n"
 msgstr "証明書の所有者の名前とホスト名 %s が一致しません\n"
 
-#: src/gnutls.c:847 src/openssl.c:1000
+#: src/gnutls.c:847 src/openssl.c:1011
 msgid "The public key does not match pinned public key!\n"
 msgstr "公開鍵が固定した公開鍵と一致しません!\n"
 
@@ -1392,7 +1392,7 @@ msgstr ""
 "されている必要があります。\n"
 
 #: src/init.c:1447 src/init.c:1469 src/init.c:1577 src/init.c:1633
-#: src/init.c:1699 src/init.c:1718 src/init.c:1743
+#: src/init.c:1699 src/init.c:1719 src/init.c:1744
 #, c-format
 msgid "%s: %s: Invalid value %s.\n"
 msgstr "%s: %s: %s は無効な値です。\n"
@@ -1610,7 +1610,9 @@ msgstr "       --retry-connrefused         接続を拒否されてもリトラ�
 msgid ""
 "       --retry-on-http-error=ERRORS    comma-separated list of HTTP errors "
 "to retry\n"
-msgstr "       --retry-on-http-error=ERRORS    コンマ区切りで指定したHTTPのエラーの場合リトライする\n"
+msgstr ""
+"       --retry-on-http-error=ERRORS    コンマ区切りで指定したHTTPのエラーの場"
+"合リトライする\n"
 
 #: src/main.c:641
 msgid "  -O,  --output-document=FILE      write documents to FILE\n"
@@ -3162,54 +3164,58 @@ msgstr "警告: 弱い乱数の種を使用しています\n"
 msgid "Could not seed PRNG; consider using --random-file.\n"
 msgstr "PRNGの初期化に失敗しました。--random-file の使用を検討してください。\n"
 
-#: src/openssl.c:268
+#: src/openssl.c:272
+msgid "Your OpenSSL version is too old to support TLS 1.3\n"
+msgstr "OpenSSL のバージョンが古すぎて TLSv1.3 をサポートしていません\n"
+
+#: src/openssl.c:278
 msgid "Your OpenSSL version is too old to support TLSv1.1\n"
 msgstr "OpenSSL のバージョンが古すぎて TLSv1.1 をサポートしていません\n"
 
-#: src/openssl.c:272
+#: src/openssl.c:282
 msgid "Your OpenSSL version is too old to support TLSv1.2\n"
 msgstr "OpenSSL のバージョンが古すぎて TLSv1.2 をサポートしていません\n"
 
-#: src/openssl.c:277
+#: src/openssl.c:288
 #, c-format
 msgid "OpenSSL: unimplemented 'secure-protocol' option value %d\n"
 msgstr "OpenSSL: 実装されていない 'secure-protocol' オプション値 %d\n"
 
-#: src/openssl.c:826
+#: src/openssl.c:837
 #, c-format
 msgid "%s: cannot verify %s's certificate, issued by %s:\n"
 msgstr "%s: %s の証明書(発行者: %s)の検証に失敗しました:\n"
 
-#: src/openssl.c:837
+#: src/openssl.c:848
 msgid "  Unable to locally verify the issuer's authority.\n"
 msgstr "  発行者の権限を検証できませんでした。\n"
 
-#: src/openssl.c:842
+#: src/openssl.c:853
 msgid "  Self-signed certificate encountered.\n"
 msgstr "  自己署名証明書です。\n"
 
-#: src/openssl.c:845
+#: src/openssl.c:856
 msgid "  Issued certificate not yet valid.\n"
 msgstr "  発行された証明書はまだ有効ではありません。\n"
 
-#: src/openssl.c:848
+#: src/openssl.c:859
 msgid "  Issued certificate has expired.\n"
 msgstr "  発行された証明書は失効しています。\n"
 
-#: src/openssl.c:936
+#: src/openssl.c:947
 #, c-format
 msgid ""
 "%s: no certificate subject alternative name matches\n"
 "\trequested host name %s.\n"
 msgstr "%s: 証明書に記載されている別名とホスト名 %s が一致しません\n"
 
-#: src/openssl.c:955
+#: src/openssl.c:966
 #, c-format
 msgid ""
 "    %s: certificate common name %s doesn't match requested host name %s.\n"
 msgstr "    %s: 証明書に記載されている名前 %s とホスト名 %s が一致しません\n"
 
-#: src/openssl.c:987
+#: src/openssl.c:998
 #, c-format
 msgid ""
 "    %s: certificate common name is invalid (contains a NUL character).\n"
@@ -3220,7 +3226,7 @@ msgstr ""
 "    接続先のサーバがなりすましている可能性があります。\n"
 "    つまり、本物の %s ではないかもしれません。\n"
 
-#: src/openssl.c:1012
+#: src/openssl.c:1023
 #, c-format
 msgid "To connect to %s insecurely, use `--no-check-certificate'.\n"
 msgstr ""
