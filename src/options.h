@@ -257,6 +257,8 @@ struct options
   bool ftps_fallback_to_ftp;
   bool ftps_implicit;
   bool ftps_clear_data_connection;
+
+  char *tls_ciphers_string;
 #endif /* HAVE_SSL */
 
   bool cookies;                 /* whether cookies are used. */
@@ -339,6 +341,9 @@ struct options
   bool hsts;
   char *hsts_file;
 #endif
+
+  const char *homedir;          /* the homedir of the running process */
+  const char *wgetrcfile;       /* the wgetrc file to be loaded */
 };
 
 extern struct options opt;

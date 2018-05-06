@@ -103,7 +103,7 @@ as that of the covered work.  */
 #endif /* def __VMS */
 
 #ifdef TESTING
-#include "test.h"
+#include "../tests/unit-tests.h"
 #endif
 
 #include "exits.h"
@@ -848,7 +848,12 @@ fopen_stat(const char *fname, const char *mode, file_stats_t *fstats)
   FILE *fp;
   struct stat fdstats;
 
+#if defined FUZZING && defined TESTING
+  fp = fopen_wgetrc (fname, mode);
+  return fp;
+#else
   fp = fopen (fname, mode);
+#endif
   if (fp == NULL)
   {
     logprintf (LOG_NOTQUIET, _("Failed to Fopen file %s\n"), fname);
@@ -1148,7 +1153,7 @@ accdir (const char *directory)
 bool
 match_tail (const char *string, const char *tail, bool fold_case)
 {
-  int pos = strlen (string) - strlen (tail);
+  int pos = (int) strlen (string) - (int) strlen (tail);
 
   if (pos < 0)
     return false;  /* tail is longer than string.  */
@@ -1274,6 +1279,7 @@ wget_read_file (const char *file)
 
   /* Some magic in the finest tradition of Perl and its kin: if FILE
      is "-", just use stdin.  */
+#ifndef FUZZING
   if (HYPHENP (file))
     {
       fd = fileno (stdin);
@@ -1282,6 +1288,7 @@ wget_read_file (const char *file)
          redirected from a regular file, mmap() will still work.  */
     }
   else
+#endif
     fd = open (file, O_RDONLY);
   if (fd < 0)
     return NULL;
@@ -2441,6 +2448,11 @@ void *
 compile_posix_regex (const char *str)
 {
   regex_t *regex = xmalloc (sizeof (regex_t));
+#ifdef TESTING
+  /* regcomp might be *very* cpu+memory intensive,
+   *  see https://sourceware.org/glibc/wiki/Security%20Exceptions */
+  str = "a";
+#endif
   int errcode = regcomp ((regex_t *) regex, str, REG_EXTENDED | REG_NOSUB);
   if (errcode != 0)
     {

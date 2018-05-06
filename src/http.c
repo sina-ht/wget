@@ -71,7 +71,7 @@ as that of the covered work.  */
 #endif
 
 #ifdef TESTING
-#include "test.h"
+#include "../tests/unit-tests.h"
 #endif
 
 #ifdef __VMS
@@ -1927,7 +1927,7 @@ initialize_request (const struct url *u, struct http_stat *hs, int *dt, struct u
 
   /* Check for ~/.netrc if none of the above match */
   if (opt.netrc && (!*user || !*passwd))
-    search_netrc (u->host, (const char **) user, (const char **) passwd, 0);
+    search_netrc (u->host, (const char **) user, (const char **) passwd, 0, NULL);
 
   /* We only do "site-wide" authentication with "global" user/password
    * values unless --auth-no-challenge has been requested; URL user/password
@@ -4594,7 +4594,7 @@ The sizes do not match (local %s) -- retrieving.\n"),
                   bool finished = true;
                   if (opt.recursive)
                     {
-                      if (*dt & TEXTHTML)
+                      if ((*dt & TEXTHTML) || (*dt & TEXTCSS))
                         {
                           logputs (LOG_VERBOSE, _("\
 Remote file exists and could contain links to other resources -- retrieving.\n\n"));
@@ -4609,7 +4609,7 @@ Remote file exists but does not contain any link -- not retrieving.\n\n"));
                     }
                   else
                     {
-                      if (*dt & TEXTHTML)
+                      if ((*dt & TEXTHTML) || (*dt & TEXTCSS))
                         {
                           logprintf (LOG_VERBOSE, _("\
 Remote file exists and could contain further links,\n\
