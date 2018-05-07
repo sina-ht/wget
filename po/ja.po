@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wget 1.18.109\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
-"POT-Creation-Date: 2018-05-06 18:55+0900\n"
-"PO-Revision-Date: 2018-05-06 19:03+0900\n"
+"POT-Creation-Date: 2018-05-07 18:46+0900\n"
+"PO-Revision-Date: 2018-05-07 18:49+0900\n"
 "Last-Translator: Hiroshi Takekawa <sian@big.or.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -307,7 +307,7 @@ msgstr "接続しました。\n"
 msgid "failed: %s.\n"
 msgstr "失敗しました: %s.\n"
 
-#: src/connect.c:399 src/http.c:2097
+#: src/connect.c:399 src/http.c:2105
 #, c-format
 msgid "%s: unable to resolve host address %s\n"
 msgstr "%s: ホストアドレス %s を解決できませんでした。\n"
@@ -368,7 +368,7 @@ msgstr "Set-Cookie: %s の位置 %d には文法エラーがあります。\n"
 msgid "Cookie coming from %s attempted to set domain to "
 msgstr "%s からのクッキーがドメインを次のように設定しようとしました。"
 
-#: src/cookies.c:774
+#: src/cookies.c:774 src/spider.c:92
 #, c-format
 msgid "%s\n"
 msgstr "%s\n"
@@ -432,12 +432,12 @@ msgstr " (%s バイト)"
 msgid "Length: %s"
 msgstr "長さ: %s"
 
-#: src/ftp.c:231 src/http.c:4029
+#: src/ftp.c:231 src/http.c:4037
 #, c-format
 msgid ", %s (%s) remaining"
 msgstr ", %s (%s) 残っています"
 
-#: src/ftp.c:235 src/http.c:4033
+#: src/ftp.c:235 src/http.c:4041
 #, c-format
 msgid ", %s remaining"
 msgstr ", %s 残っています"
@@ -606,7 +606,7 @@ msgstr ""
 "%s というファイルまたはディレクトリはありません。\n"
 "\n"
 
-#: src/ftp.c:1505 src/http.c:2552
+#: src/ftp.c:1505 src/http.c:2560
 #, c-format
 msgid "%s has sprung into existence.\n"
 msgstr "%s が存在しています。\n"
@@ -634,12 +634,12 @@ msgstr "データ転送を中断しました。\n"
 msgid "File %s already there; not retrieving.\n"
 msgstr "ファイル %s はすでに存在するので、取得しません。\n"
 
-#: src/ftp.c:1948 src/http.c:4299
+#: src/ftp.c:1948 src/http.c:4307
 #, c-format
 msgid "(try:%2d)"
 msgstr "(試行:%2d)"
 
-#: src/ftp.c:2039 src/http.c:4715
+#: src/ftp.c:2039 src/http.c:4723
 #, c-format
 msgid ""
 "%s (%s) - written to stdout %s[%s]\n"
@@ -648,7 +648,7 @@ msgstr ""
 "%s (%s) - stdout へ出力しました %s[%s]\n"
 "\n"
 
-#: src/ftp.c:2040 src/http.c:4716
+#: src/ftp.c:2040 src/http.c:4724
 #, c-format
 msgid ""
 "%s (%s) - %s saved [%s]\n"
@@ -951,11 +951,11 @@ msgstr "%s: %s は無効な URL です(%s)。\n"
 msgid "Failed writing HTTP request: %s.\n"
 msgstr "HTTP による接続要求の送信に失敗しました: %s\n"
 
-#: src/http.c:782
+#: src/http.c:790
 msgid "No headers, assuming HTTP/0.9"
 msgstr "ヘッダがないので、HTTP/0.9 だと仮定します"
 
-#: src/http.c:1612
+#: src/http.c:1620
 #, c-format
 msgid ""
 "File %s already there; not retrieving.\n"
@@ -964,11 +964,11 @@ msgstr ""
 "ファイル %s はすでに存在するので、取得しません。\n"
 "\n"
 
-#: src/http.c:1822
+#: src/http.c:1830
 msgid "gmtime failed. This is probably a bug.\n"
 msgstr "gmtime が失敗しました。おそらくバグです。\n"
 
-#: src/http.c:1883
+#: src/http.c:1891
 msgid ""
 "Cannot convert timestamp to http format. Falling back to time 0 as last "
 "modification time.\n"
@@ -976,55 +976,55 @@ msgstr ""
 "タイムスタンプを http 形式に変換できません。0 を最終変更時間として使いま"
 "す。\n"
 
-#: src/http.c:1987
+#: src/http.c:1995
 #, c-format
 msgid "BODY data file %s missing: %s\n"
 msgstr "BODY データファイル %s がありません: %s\n"
 
-#: src/http.c:2079
+#: src/http.c:2087
 #, c-format
 msgid "Reusing existing connection to [%s]:%d.\n"
 msgstr "[%s]:%d への接続を再利用します。\n"
 
-#: src/http.c:2084
+#: src/http.c:2092
 #, c-format
 msgid "Reusing existing connection to %s:%d.\n"
 msgstr "%s:%d への接続を再利用します。\n"
 
-#: src/http.c:2150
+#: src/http.c:2158
 #, c-format
 msgid "Failed reading proxy response: %s\n"
 msgstr "プロクシからの読み込みに失敗しました: %s\n"
 
-#: src/http.c:2169 src/http.c:3408 src/http.c:4509
+#: src/http.c:2177 src/http.c:3416 src/http.c:4517
 #, c-format
 msgid "%s ERROR %d: %s.\n"
 msgstr "%s エラー %d: %s。\n"
 
-#: src/http.c:2171 src/http.c:3410 src/http.c:3598
+#: src/http.c:2179 src/http.c:3418 src/http.c:3606
 msgid "Malformed status line"
 msgstr "奇妙なステータス行です"
 
-#: src/http.c:2182
+#: src/http.c:2190
 #, c-format
 msgid "Proxy tunneling failed: %s"
 msgstr "プロクシのトンネリングに失敗しました: %s"
 
-#: src/http.c:2418
+#: src/http.c:2426
 msgid "Unknown authentication scheme.\n"
 msgstr "不明な認証形式です。\n"
 
-#: src/http.c:2436
+#: src/http.c:2444
 #, c-format
 msgid "Authentication selected: %s\n"
 msgstr "選択された認証形式: %s\n"
 
-#: src/http.c:2567
+#: src/http.c:2575
 #, c-format
 msgid "Saving to: %s\n"
 msgstr "%s に保存中\n"
 
-#: src/http.c:2786
+#: src/http.c:2794
 #, c-format
 msgid ""
 "When downloading signature:\n"
@@ -1033,20 +1033,20 @@ msgstr ""
 "署名をダウンロード中に:\n"
 "%s: %s.\n"
 
-#: src/http.c:2822
+#: src/http.c:2830
 msgid "Unable to read signature content from temporary file. Skipping.\n"
 msgstr "一時ファイルから署名情報が読めません。飛ばします。\n"
 
-#: src/http.c:2845
+#: src/http.c:2853
 msgid "Could not create temporary file. Skipping signature download.\n"
 msgstr "一時ファイルが作れません。署名のダウンロードを飛ばします。\n"
 
-#: src/http.c:2879 src/http.c:2961
+#: src/http.c:2887 src/http.c:2969
 #, c-format
 msgid "Invalid pri value. Assuming %d.\n"
 msgstr "無効な pri 値です。%d を用います。\n"
 
-#: src/http.c:3065
+#: src/http.c:3073
 msgid ""
 "Could not find acceptable digest for Metalink resources.\n"
 "Ignoring them.\n"
@@ -1054,42 +1054,42 @@ msgstr ""
 "メタリンクリソースに対して許容できるダイジェストが見つかりませんでした。\n"
 "無視します。\n"
 
-#: src/http.c:3202
+#: src/http.c:3210
 msgid "Disabling SSL due to encountered errors.\n"
 msgstr "エラーが発生したので SSL を無効にします\n"
 
-#: src/http.c:3344
+#: src/http.c:3352
 #, c-format
 msgid "%s request sent, awaiting response... "
 msgstr "%s による接続要求を送信しました、応答を待っています... "
 
-#: src/http.c:3384
+#: src/http.c:3392
 msgid "No data received.\n"
 msgstr "データが受信されませんでした\n"
 
-#: src/http.c:3390
+#: src/http.c:3398
 #, c-format
 msgid "Read error (%s) in headers.\n"
 msgstr "ヘッダ内で読み込みエラー(%s)です\n"
 
-#: src/http.c:3600
+#: src/http.c:3608
 msgid "(no description)"
 msgstr "(説明なし)"
 
-#: src/http.c:3788
+#: src/http.c:3796
 #, c-format
 msgid "Location: %s%s\n"
 msgstr "場所: %s%s\n"
 
-#: src/http.c:3789 src/http.c:4039
+#: src/http.c:3797 src/http.c:4047
 msgid "unspecified"
 msgstr "特定できません"
 
-#: src/http.c:3790
+#: src/http.c:3798
 msgid " [following]"
 msgstr " [続く]"
 
-#: src/http.c:3872
+#: src/http.c:3880
 #, c-format
 msgid ""
 "File %s not modified on server. Omitting download.\n"
@@ -1099,7 +1099,7 @@ msgstr ""
 "す。\n"
 "\n"
 
-#: src/http.c:3945
+#: src/http.c:3953
 #, c-format
 msgid ""
 "Server ignored If-Modified-Since header for file %s.\n"
@@ -1110,7 +1110,7 @@ msgstr ""
 "--no-if-modified-since オプションを付けるといいかもしれません。\n"
 "\n"
 
-#: src/http.c:3975
+#: src/http.c:3983
 msgid ""
 "\n"
 "    The file is already fully retrieved; nothing to do.\n"
@@ -1120,59 +1120,59 @@ msgstr ""
 "    このファイルは既に全部取得しおわっています。何もすることはありません。\n"
 "\n"
 
-#: src/http.c:4019
+#: src/http.c:4027
 msgid "Length: "
 msgstr "長さ: "
 
-#: src/http.c:4039
+#: src/http.c:4047
 msgid "ignored"
 msgstr "無視しました"
 
-#: src/http.c:4207
+#: src/http.c:4215
 msgid "Warning: wildcards not supported in HTTP.\n"
 msgstr "警告: HTTPはワイルドカードに対応していません。\n"
 
-#: src/http.c:4289
+#: src/http.c:4297
 msgid "Spider mode enabled. Check if remote file exists.\n"
 msgstr ""
 "スパイダーモードが有効です。リモートファイルが存在してるか確認します。\n"
 
-#: src/http.c:4379
+#: src/http.c:4387
 #, c-format
 msgid "Cannot write to %s (%s).\n"
 msgstr "%s へ書き込めません(%s)。\n"
 
-#: src/http.c:4390
+#: src/http.c:4398
 msgid "Required attribute missing from Header received.\n"
 msgstr "必要なアトリビュートが受けとったヘッダにありません。\n"
 
-#: src/http.c:4395
+#: src/http.c:4403
 msgid "Username/Password Authentication Failed.\n"
 msgstr "Username/Password による認証に失敗しました。\n"
 
-#: src/http.c:4401
+#: src/http.c:4409
 msgid "Cannot write to WARC file.\n"
 msgstr "WARC ファイルへ書き込めません。\n"
 
-#: src/http.c:4407
+#: src/http.c:4415
 msgid "Cannot write to temporary WARC file.\n"
 msgstr "一時 WARC ファイルへ書き込めません。\n"
 
-#: src/http.c:4412
+#: src/http.c:4420
 msgid "Unable to establish SSL connection.\n"
 msgstr "SSL による接続が確立できません。\n"
 
-#: src/http.c:4418
+#: src/http.c:4426
 #, c-format
 msgid "Cannot unlink %s (%s).\n"
 msgstr "%s を削除できません(%s)。\n"
 
-#: src/http.c:4428
+#: src/http.c:4436
 #, c-format
 msgid "ERROR: Redirection (%d) without location.\n"
 msgstr "エラー: 場所が存在しないリダイレクション(%d)です。\n"
 
-#: src/http.c:4450
+#: src/http.c:4458
 msgid ""
 "Could not find Metalink data in HTTP response. Downloading file using HTTP "
 "GET.\n"
@@ -1180,23 +1180,23 @@ msgstr ""
 "HTTP 応答にメタリンク情報がありませんでした。HTTP GET でダウンロードしま"
 "す。\n"
 
-#: src/http.c:4459
+#: src/http.c:4467
 msgid "Metalink headers found. Switching to Metalink mode.\n"
 msgstr "メタリンクヘッダが見つかりました。メタリンクモードに変更します。\n"
 
-#: src/http.c:4499
+#: src/http.c:4507
 msgid "Remote file does not exist -- broken link!!!\n"
 msgstr "リモートファイルが存在していません -- リンクが壊れています!!!\n"
 
-#: src/http.c:4526
+#: src/http.c:4534
 msgid "Last-modified header missing -- time-stamps turned off.\n"
 msgstr "Last-modified ヘッダがありません -- 日付を無効にします。\n"
 
-#: src/http.c:4534
+#: src/http.c:4542
 msgid "Last-modified header invalid -- time-stamp ignored.\n"
 msgstr "Last-modified ヘッダが無効です -- 日付を無視します。\n"
 
-#: src/http.c:4564
+#: src/http.c:4572
 #, c-format
 msgid ""
 "Server file no newer than local file %s -- not retrieving.\n"
@@ -1205,16 +1205,16 @@ msgstr ""
 "サーバ側のファイルよりローカルのファイル %s の方が新しいので取得しません。\n"
 "\n"
 
-#: src/http.c:4572
+#: src/http.c:4580
 #, c-format
 msgid "The sizes do not match (local %s) -- retrieving.\n"
 msgstr "大きさが合わないので(ローカルは %s)、転送します。\n"
 
-#: src/http.c:4581
+#: src/http.c:4589
 msgid "Remote file is newer, retrieving.\n"
 msgstr "リモートファイルのほうが新しいので、転送します。\n"
 
-#: src/http.c:4599
+#: src/http.c:4607
 msgid ""
 "Remote file exists and could contain links to other resources -- "
 "retrieving.\n"
@@ -1224,7 +1224,7 @@ msgstr ""
 "中。\n"
 "\n"
 
-#: src/http.c:4605
+#: src/http.c:4613
 msgid ""
 "Remote file exists but does not contain any link -- not retrieving.\n"
 "\n"
@@ -1233,7 +1233,7 @@ msgstr ""
 "ん。\n"
 "\n"
 
-#: src/http.c:4614
+#: src/http.c:4622
 msgid ""
 "Remote file exists and could contain further links,\n"
 "but recursion is disabled -- not retrieving.\n"
@@ -1243,18 +1243,18 @@ msgstr ""
 "す -- 取得しません。\n"
 "\n"
 
-#: src/http.c:4620
+#: src/http.c:4628
 msgid ""
 "Remote file exists.\n"
 "\n"
 msgstr "リモートファイルが存在します。\n"
 
-#: src/http.c:4629
+#: src/http.c:4637
 #, c-format
 msgid "%s URL: %s %2d %s\n"
 msgstr "%s URL: %s %2d %s\n"
 
-#: src/http.c:4679
+#: src/http.c:4687
 #, c-format
 msgid ""
 "%s (%s) - written to stdout %s[%s/%s]\n"
@@ -1263,7 +1263,7 @@ msgstr ""
 "%s (%s) - stdout へ出力完了 %s[%s/%s]\n"
 "\n"
 
-#: src/http.c:4680
+#: src/http.c:4688
 #, c-format
 msgid ""
 "%s (%s) - %s saved [%s/%s]\n"
@@ -1272,58 +1272,58 @@ msgstr ""
 "%s (%s) - %s へ保存完了 [%s/%s]\n"
 "\n"
 
-#: src/http.c:4741
+#: src/http.c:4749
 #, c-format
 msgid "%s (%s) - Connection closed at byte %s. "
 msgstr "%s (%s) - %s バイトで接続が終了しました。 "
 
-#: src/http.c:4764
+#: src/http.c:4772
 #, c-format
 msgid "%s (%s) - Read error at byte %s (%s)."
 msgstr "%s (%s) - %s バイトで読み込みエラーが発生しました (%s)。"
 
-#: src/http.c:4773
+#: src/http.c:4781
 #, c-format
 msgid "%s (%s) - Read error at byte %s/%s (%s). "
 msgstr "%s (%s) - %s/%s バイトで読み込みエラーが発生しました (%s)。 "
 
-#: src/http.c:5011
+#: src/http.c:5019
 #, c-format
 msgid "Unsupported quality of protection '%s'.\n"
 msgstr "'%s' という保護方式はサポートされていません。\n"
 
-#: src/http.c:5016
+#: src/http.c:5024
 #, c-format
 msgid "Unsupported algorithm '%s'.\n"
 msgstr "'%s' というアルゴリズムはサポートされていません。\n"
 
-#: src/init.c:583
+#: src/init.c:585
 #, c-format
 msgid ""
 "%s: WGETRC points to %s, which couldn't be accessed because of error: %s.\n"
 msgstr "%s: WGETRC が %s を指していますが, 存在しません: %s\n"
 
-#: src/init.c:683 src/netrc.c:452
+#: src/init.c:685 src/netrc.c:452
 #, c-format
 msgid "%s: Cannot read %s (%s).\n"
 msgstr "%s: %s (%s)を読み込めません。\n"
 
-#: src/init.c:700
+#: src/init.c:702
 #, c-format
 msgid "%s: Error in %s at line %d.\n"
 msgstr "%s: %s 内の %d 行でエラーです\n"
 
-#: src/init.c:706
+#: src/init.c:708
 #, c-format
 msgid "%s: Syntax error in %s at line %d.\n"
 msgstr "%s: %s 内の %d 行で文法エラーが発生しました\n"
 
-#: src/init.c:711
+#: src/init.c:713
 #, c-format
 msgid "%s: Unknown command %s in %s at line %d.\n"
 msgstr "%s: コマンド %s (%s の %d行目) は不明です\n"
 
-#: src/init.c:750
+#: src/init.c:752
 #, c-format
 msgid ""
 "Parsing system wgetrc file (env SYSTEM_WGETRC) failed.  Please check\n"
@@ -1334,7 +1334,7 @@ msgstr ""
 "'%s'\n"
 "の内容を確認するか --config で別のファイルを指定してください。\n"
 
-#: src/init.c:765
+#: src/init.c:767
 #, c-format
 msgid ""
 "Parsing system wgetrc file failed.  Please check\n"
@@ -1345,49 +1345,49 @@ msgstr ""
 "'%s'\n"
 "の内容を確認するか --config で別のファイルを指定してください。\n"
 
-#: src/init.c:781
+#: src/init.c:783
 #, c-format
 msgid "%s: Warning: Both system and user wgetrc point to %s.\n"
 msgstr "%s: 警告: システムとユーザの wgetrc の両方が %s を指定しています。\n"
 
-#: src/init.c:981
+#: src/init.c:983
 #, c-format
 msgid "%s: Invalid --execute command %s\n"
 msgstr "%s: 無効な --execute 指定 %s です。\n"
 
-#: src/init.c:1041
+#: src/init.c:1043
 #, c-format
 msgid "%s: %s: Invalid boolean %s; use `on' or `off'.\n"
 msgstr ""
 "%s: %s: %s はブール値として無効です。`on' か `off' を指定してください。\n"
 
-#: src/init.c:1074
+#: src/init.c:1076
 #, c-format
 msgid "%s: %s: Invalid %s; use `on', `off' or `quiet'.\n"
 msgstr ""
 "%s: %s: %s は無効です。`on'、`off'、`quiet' のいずれかを指定してください。\n"
 
-#: src/init.c:1094
+#: src/init.c:1096
 #, c-format
 msgid "%s: %s: Invalid number %s.\n"
 msgstr "%s: %s: %s は無効な数です。\n"
 
-#: src/init.c:1176
+#: src/init.c:1178
 #, c-format
 msgid "%s: %s must only be used once\n"
 msgstr "%s: %s は一度だけ使われるべきものです\n"
 
-#: src/init.c:1331 src/init.c:1352
+#: src/init.c:1333 src/init.c:1354
 #, c-format
 msgid "%s: %s: Invalid byte value %s\n"
 msgstr "%s: %s: %s は無効なバイト値です。\n"
 
-#: src/init.c:1377
+#: src/init.c:1379
 #, c-format
 msgid "%s: %s: Invalid time period %s\n"
 msgstr "%s: %s: %s は無効な時間間隔です。\n"
 
-#: src/init.c:1439 src/main.c:1905
+#: src/init.c:1441 src/main.c:1905
 #, c-format
 msgid ""
 "use-askpass requires a string or either environment variable WGET_ASKPASS or "
@@ -1396,28 +1396,28 @@ msgstr ""
 "use-askpass は文字列が渡されるか、環境変数 WGET_ASKPASS か SSH_ASKPASS が設定"
 "されている必要があります。\n"
 
-#: src/init.c:1457 src/init.c:1479 src/init.c:1587 src/init.c:1643
-#: src/init.c:1709 src/init.c:1729 src/init.c:1754
+#: src/init.c:1459 src/init.c:1481 src/init.c:1589 src/init.c:1645
+#: src/init.c:1711 src/init.c:1731 src/init.c:1756
 #, c-format
 msgid "%s: %s: Invalid value %s.\n"
 msgstr "%s: %s: %s は無効な値です。\n"
 
-#: src/init.c:1513
+#: src/init.c:1515
 #, c-format
 msgid "%s: %s: Invalid header %s.\n"
 msgstr "%s: %s: %s は無効なヘッダです。\n"
 
-#: src/init.c:1534
+#: src/init.c:1536
 #, c-format
 msgid "%s: %s: Invalid WARC header %s.\n"
 msgstr "%s: %s: %s は無効な WARC ヘッダです。\n"
 
-#: src/init.c:1600
+#: src/init.c:1602
 #, c-format
 msgid "%s: %s: Invalid progress type %s.\n"
 msgstr "%s: %s: %s は無効な経過表示形式です。\n"
 
-#: src/init.c:1682
+#: src/init.c:1684
 #, c-format
 msgid ""
 "%s: %s: Invalid restriction %s,\n"
@@ -3337,6 +3337,23 @@ msgid ""
 msgstr ""
 "再試行しています。\n"
 "\n"
+
+#: src/spider.c:75
+msgid ""
+"Found no broken links.\n"
+"\n"
+msgstr "壊れているリンクはありません。\n\n"
+
+#: src/spider.c:82
+#, c-format
+msgid ""
+"Found %d broken link.\n"
+"\n"
+msgid_plural ""
+"Found %d broken links.\n"
+"\n"
+msgstr[0] "%d 個のリンクが壊れています。\n\n"
+msgstr[1] "%d 個のリンクが壊れています。\n\n"
 
 #: src/url.c:674
 msgid "No error"
