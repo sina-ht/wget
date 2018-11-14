@@ -637,7 +637,7 @@ wgetrc_file_name (void)
      SYSTEM_WGETRC should not be defined under WINDOWS.  */
   if (!file)
     {
-      char *home = ws_mypath ();
+      const char *home = ws_mypath ();
       if (home)
         {
           file = aprintf ("%s/wget.ini", home);
@@ -645,7 +645,6 @@ wgetrc_file_name (void)
             {
               xfree (file);
             }
-          xfree (home);
         }
     }
 #endif /* WINDOWS */
@@ -885,8 +884,10 @@ parse_line (const char *line, char **com, char **val, int *comind)
 
 #if defined(WINDOWS) || defined(MSDOS)
 # define ISSEP(c) ((c) == '/' || (c) == '\\')
+# define SEPSTRING "/\\"
 #else
 # define ISSEP(c) ((c) == '/')
+# define SEPSTRING "/"
 #endif
 
 /* Run commands[comind].action. */
@@ -927,8 +928,7 @@ setval_internal_tilde (int comind, const char *com, const char *val)
           xfree (*pstring);
 
           /* Skip the leading "~/". */
-          for (++val; ISSEP (*val); val++)
-            ;
+          val += strspn(val + 1, SEPSTRING) + 1;
           *pstring = concat_strings (home, "/", val, (char *)0);
           xfree (home);
         }
