@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: wget 1.21\n"
+"Project-Id-Version: GNU wget 1.21.1.18-6ac3-dirty\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
-"POT-Creation-Date: 2021-01-02 19:02+0900\n"
+"POT-Creation-Date: 2021-09-09 23:05+0900\n"
 "PO-Revision-Date: 2021-01-02 19:06+0900\n"
 "Last-Translator: Hiroshi Takekawa <sian@big.or.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -1549,7 +1549,8 @@ msgid ""
 "                                     (applies if more then 1 URL is to be "
 "retrieved)\n"
 msgstr ""
-"       --random-wait               ダウンロード毎に 0.5*WAIT〜1.5*WAIT 秒待つ\n"
+"       --random-wait               ダウンロード毎に 0.5*WAIT〜1.5*WAIT 秒待"
+"つ\n"
 "                                     (2つ以上のURLを取得時のみ)\n"
 
 #: src/main.c:704
@@ -2657,7 +2658,9 @@ msgstr "--ask-password と --password を両方指定することはできませ
 msgid ""
 "WARNING: No username set with --ask-password. This is usually not what you "
 "want.\n"
-msgstr "警告: --ask-password でユーザ名がありません。おそらく望ましいことではありません。\n"
+msgstr ""
+"警告: --ask-password でユーザ名がありません。おそらく望ましいことではありませ"
+"ん。\n"
 
 #: src/main.c:1775
 #, c-format
@@ -3399,4 +3402,6 @@ msgstr "一時 WARC ファイルをオープンできません。\n"
 
 #: src/warc.c:1515
 msgid "Found exact match in CDX file. Saving revisit record to WARC.\n"
-msgstr "完全に一致した CDX ファイルが見つかりました。WARC の再訪記録に保存しました。\n"
+msgstr ""
+"完全に一致した CDX ファイルが見つかりました。WARC の再訪記録に保存しまし"
+"た。\n"
