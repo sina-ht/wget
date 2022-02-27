@@ -1,6 +1,6 @@
+/ABOUT-NLS~
 # Project Root
-/.sc-start-sc_bindtextdomain
-/.sc-start-sc_prohibit_HAVE_MBRTOWC
+/.sc-start-*
 /.version
 /ABOUT-NLS
 /GNUmakefile
@@ -17,6 +17,7 @@
 !/lib/Makefile.am
 /maint.mk
 /gnulib_po/
+/aminclude_static.am
 # Wildcard Ignores
 *~
 po/*.gmo*
@@ -54,6 +55,7 @@ doc/version.texi
 doc/wget.1
 doc/wget.info
 doc/wget.pod
+doc/.gitignore
 # m4/
 m4/.gitignore
 m4/gnulib-cache.m4
